@@ -1,26 +1,36 @@
 {
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
-  "serialNumber": "urn:uuid:d4e2f8a1-7b3c-4d9e-a512-6f0c8b2e4d7a",
-  "version": "1",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8ad2b1fe-5c3d-4b24-b187-c13a9e9660fd",
+  "version": 1,
   "metadata": {
     "timestamp": "2025-09-21T00:00:00Z",
-    "tools": [
-      {
-        "vendor": "CycloneDX",
-        "name": "cyclonedx-maven-plugin",
-        "version": "2.8.2"
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.8.2",
+          "purl": "pkg:maven/org.cyclonedx/cyclonedx-maven-plugin@2.8.2",
+          "type": "application",
+          "bom-ref": "pkg:maven/org.cyclonedx/cyclonedx-maven-plugin@2.8.2"
+        }
+      ]
+    },
     "component": {
       "group": "com.appsecco",
       "name": "dvja",
       "version": "1.0-SNAPSHOT",
       "type": "application",
-      "bom-ref": "dvja-root",
-      "purl": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT",
-      "description": "Damn Vulnerable Java Application - Struts2/Spring/Hibernate vulnerable web app"
-    }
+      "bom-ref": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT",
+      "purl": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT"
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "maven"
+      }
+    ]
   },
   "components": [
     {
@@ -30,8 +40,12 @@
       "purl": "pkg:maven/org.apache.struts/struts2-core@2.3.30",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.struts/struts2-core@2.3.30",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.apache.struts",
@@ -40,8 +54,12 @@
       "purl": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.apache.struts",
@@ -50,8 +68,12 @@
       "purl": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.apache.struts.xwork",
@@ -60,8 +82,12 @@
       "purl": "pkg:maven/org.apache.struts.xwork/xwork-core@2.3.30",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.struts.xwork/xwork-core@2.3.30",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.apache.logging.log4j",
@@ -70,8 +96,12 @@
       "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.apache.logging.log4j",
@@ -80,8 +110,12 @@
       "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
       "type": "library",
       "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.springframework",
@@ -90,8 +124,12 @@
       "purl": "pkg:maven/org.springframework/spring-core@3.0.5.RELEASE",
       "type": "library",
       "bom-ref": "pkg:maven/org.springframework/spring-core@3.0.5.RELEASE",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.springframework",
@@ -100,8 +138,12 @@
       "purl": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
       "type": "library",
       "bom-ref": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.springframework",
@@ -110,8 +152,12 @@
       "purl": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
       "type": "library",
       "bom-ref": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.springframework",
@@ -120,8 +166,12 @@
       "purl": "pkg:maven/org.springframework/spring-context@3.0.5.RELEASE",
       "type": "library",
       "bom-ref": "pkg:maven/org.springframework/spring-context@3.0.5.RELEASE",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.hibernate",
@@ -130,8 +180,12 @@
       "purl": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
       "type": "library",
       "bom-ref": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
-      "licenses": [{ "license": { "id": "LGPL-2.1-only" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.hibernate",
@@ -140,8 +194,12 @@
       "purl": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
       "type": "library",
       "bom-ref": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
-      "licenses": [{ "license": { "id": "LGPL-2.1-only" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.hibernate",
@@ -150,8 +208,12 @@
       "purl": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
       "type": "library",
       "bom-ref": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
-      "licenses": [{ "license": { "id": "LGPL-2.1-only" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "mysql",
@@ -160,8 +222,12 @@
       "purl": "pkg:maven/mysql/mysql-connector-java@5.1.42",
       "type": "library",
       "bom-ref": "pkg:maven/mysql/mysql-connector-java@5.1.42",
-      "licenses": [{ "license": { "id": "GPL-2.0-only" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "commons-fileupload",
@@ -170,8 +236,12 @@
       "purl": "pkg:maven/commons-fileupload/commons-fileupload@1.3.2",
       "type": "library",
       "bom-ref": "pkg:maven/commons-fileupload/commons-fileupload@1.3.2",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "commons-collections",
@@ -180,8 +250,12 @@
       "purl": "pkg:maven/commons-collections/commons-collections@3.1",
       "type": "library",
       "bom-ref": "pkg:maven/commons-collections/commons-collections@3.1",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "commons-io",
@@ -190,8 +264,12 @@
       "purl": "pkg:maven/commons-io/commons-io@2.2",
       "type": "library",
       "bom-ref": "pkg:maven/commons-io/commons-io@2.2",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "commons-codec",
@@ -200,8 +278,12 @@
       "purl": "pkg:maven/commons-codec/commons-codec@1.10",
       "type": "library",
       "bom-ref": "pkg:maven/commons-codec/commons-codec@1.10",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "commons-lang",
@@ -210,8 +292,12 @@
       "purl": "pkg:maven/commons-lang/commons-lang@2.4",
       "type": "library",
       "bom-ref": "pkg:maven/commons-lang/commons-lang@2.4",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "ognl",
@@ -220,8 +306,12 @@
       "purl": "pkg:maven/ognl/ognl@3.0.19",
       "type": "library",
       "bom-ref": "pkg:maven/ognl/ognl@3.0.19",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.freemarker",
@@ -230,8 +320,12 @@
       "purl": "pkg:maven/org.freemarker/freemarker@2.3.22",
       "type": "library",
       "bom-ref": "pkg:maven/org.freemarker/freemarker@2.3.22",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.slf4j",
@@ -240,8 +334,12 @@
       "purl": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
       "type": "library",
       "bom-ref": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
-      "licenses": [{ "license": { "id": "MIT" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "org.slf4j",
@@ -250,8 +348,12 @@
       "purl": "pkg:maven/org.slf4j/slf4j-api@1.5.2",
       "type": "library",
       "bom-ref": "pkg:maven/org.slf4j/slf4j-api@1.5.2",
-      "licenses": [{ "license": { "id": "MIT" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }, { "name": "internal:transitive", "value": "true" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "cglib",
@@ -260,8 +362,12 @@
       "purl": "pkg:maven/cglib/cglib@2.2",
       "type": "library",
       "bom-ref": "pkg:maven/cglib/cglib@2.2",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "com.google.code.gson",
@@ -270,8 +376,12 @@
       "purl": "pkg:maven/com.google.code.gson/gson@2.8.1",
       "type": "library",
       "bom-ref": "pkg:maven/com.google.code.gson/gson@2.8.1",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "com.jgeppert.struts2.bootstrap",
@@ -280,8 +390,12 @@
       "purl": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
       "type": "library",
       "bom-ref": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
-      "licenses": [{ "license": { "id": "Apache-2.0" } }],
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "javax.servlet",
@@ -290,7 +404,12 @@
       "purl": "pkg:maven/javax.servlet/servlet-api@2.4",
       "type": "library",
       "bom-ref": "pkg:maven/javax.servlet/servlet-api@2.4",
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     },
     {
       "group": "javax.servlet",
@@ -299,12 +418,18 @@
       "purl": "pkg:maven/javax.servlet/jsp-api@2.0",
       "type": "library",
       "bom-ref": "pkg:maven/javax.servlet/jsp-api@2.0",
-      "properties": [{ "name": "SrcFile", "value": "pom.xml" }]
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "pom.xml"
+        }
+      ]
     }
   ],
+  "services": [],
   "dependencies": [
     {
-      "ref": "dvja-root",
+      "ref": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT",
       "dependsOn": [
         "pkg:maven/org.apache.struts/struts2-core@2.3.30",
         "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
@@ -337,11 +462,31 @@
       ]
     },
     {
+      "ref": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:maven/org.apache.struts.xwork/xwork-core@2.3.30",
       "dependsOn": [
         "pkg:maven/commons-collections/commons-collections@3.1",
         "pkg:maven/commons-lang/commons-lang@2.4"
       ]
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-core@3.0.5.RELEASE",
+      "dependsOn": []
     },
     {
       "ref": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
@@ -351,10 +496,86 @@
       ]
     },
     {
+      "ref": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.springframework/spring-context@3.0.5.RELEASE",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/mysql/mysql-connector-java@5.1.42",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-fileupload/commons-fileupload@1.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-collections/commons-collections@3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-io/commons-io@2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-codec/commons-codec@1.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/commons-lang/commons-lang@2.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/ognl/ognl@3.0.19",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/org.freemarker/freemarker@2.3.22",
+      "dependsOn": []
+    },
+    {
       "ref": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
       "dependsOn": [
         "pkg:maven/org.slf4j/slf4j-api@1.5.2"
       ]
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/slf4j-api@1.5.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/cglib/cglib@2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.google.code.gson/gson@2.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/javax.servlet/servlet-api@2.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/javax.servlet/jsp-api@2.0",
+      "dependsOn": []
     }
   ]
 }
