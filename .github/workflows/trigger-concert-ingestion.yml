@@ -57,4 +57,10 @@ jobs:
           echo "- **Triggered By**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### SBOMs available for Concert Protect ingestion" >> $GITHUB_STEP_SUMMARY
+          echo "| App | SBOM file | Key CVEs |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|-----------|----------|" >> $GITHUB_STEP_SUMMARY
+          echo "| credit-app | app/credit-app/credit-app-sbom.json | CVE-2017-5638 (Struts 2.3.31, CVSS 10.0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| dvja | app/dvja/dvja-sbom.json | CVE-2021-44228 Log4Shell (log4j 2.3), CVE-2017-5638 (Struts 2.3.30), CVE-2022-22965 Spring4Shell (Spring 3.0.5) |" >> $GITHUB_STEP_SUMMARY
 
