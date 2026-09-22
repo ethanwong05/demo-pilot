@@ -164,17 +164,17 @@ set TARGETURI /credit-app/upload.action
 exploit
 ```
 
-## 🧪 Running Unit Tests
+## 🧪 Running Unit & OpenSSF Benchmark Tests
 
 ```bash
-# Run all tests
+# Run all unit tests and OpenSSF benchmark tests
 mvn test
 
-# Run specific test class
-mvn test -Dtest=FileUploadActionTest
+# Run specifically the OpenSSF CVE Benchmark HTTP/HTTPS test suite
+mvn test -Dtest=OssfCveBenchmarkHttpsIntegrationTest
 
-# Run with coverage
-mvn clean test jacoco:report
+# Run against a custom live HTTP or HTTPS URL endpoint
+mvn test -Dtest=OssfCveBenchmarkHttpsIntegrationTest -Dtest.app.url=https://localhost:8443/credit-app/upload.action
 ```
 
 ## 📁 Project Structure

@@ -19,7 +19,13 @@
     <!-- Credit App Package -->
     <package name="credit-app" extends="struts-default" namespace="/">
         
-        <!-- Home/Index Action -->
+        <default-action-ref name="index" />
+
+        <!-- Root & Home/Index Action -->
+        <action name="">
+            <result>/index.jsp</result>
+        </action>
+
         <action name="index">
             <result>/index.jsp</result>
         </action>
