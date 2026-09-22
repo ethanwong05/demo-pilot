@@ -37,6 +37,7 @@ jobs:
   devops-cve-research:
     name: "1: DevOps - Research CVE & Create PR"
     runs-on: ubuntu-latest
+    environment: apikey-env        # provides: BOBSHELL_API_KEY, BOBSHELL_MCP_CONFIG, CONCERT_API_KEY, CONCERT_INSTANCE_ID
     if: |
       github.event.inputs.custom_prompt == '' &&
       ((github.event_name == 'issues' && github.event.label.name == 'cve-remediation') ||
@@ -353,7 +354,7 @@ jobs:
       needs.devops-cve-research.result == 'success' &&
       needs.devops-cve-research.outputs.false_positive_detected == 'true'
     environment:
-      name: devops-approval
+      name: devops-approval        # human gate — also inherits apikey-env secrets via BOBSHELL_API_KEY/BOBSHELL_MCP_CONFIG stored here
     
     steps:
       - name: Checkout repository
@@ -668,6 +669,7 @@ jobs:
   fix-failing-tests:
     name: "4: Fix Failing Unit Tests"
     runs-on: ubuntu-latest
+    environment: apikey-env        # provides: BOBSHELL_API_KEY, BOBSHELL_MCP_CONFIG
     needs: run-unit-tests-after-approval
     if: |
       always() &&
@@ -811,6 +813,7 @@ jobs:
   debug-custom-prompt:
     name: "Debug: Custom Prompt"
     runs-on: ubuntu-latest
+    environment: apikey-env        # provides: BOBSHELL_API_KEY, BOBSHELL_MCP_CONFIG, CONCERT_API_KEY, CONCERT_INSTANCE_ID
     if: |
       github.event_name == 'workflow_dispatch' &&
       github.event.inputs.custom_prompt != ''

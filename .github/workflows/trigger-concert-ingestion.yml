@@ -9,12 +9,13 @@ on:
 jobs:
   trigger-ingestion:
     runs-on: ubuntu-latest
+    environment: apikey-env        # provides: CONCERT_API_KEY, CONCERT_INSTANCE_ID secrets
     
     steps:
       - name: Trigger Concert Ingestion API
         env:
           CONCERT_API_KEY: ${{ secrets.CONCERT_API_KEY }}
-          INSTANCE_ID: ${{ secrets.CONCERT_INSTANCE_ID || '0000-0000-0000-0000' }}
+          INSTANCE_ID: ${{ secrets.CONCERT_INSTANCE_ID }}
           CONCERT_URL: ${{ vars.CONCERT_HOSTNAME || 'https://162.133.134.251:12443' }}
           JOB_ID: ${{ vars.INGESTION_JOB_ID || '92073c05-78c1-4f1b-8408-89ed1341a592' }}
         run: |
