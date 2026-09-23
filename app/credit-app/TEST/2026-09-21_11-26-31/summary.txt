@@ -1,0 +1,17 @@
+Credit-App CVE Validation Summary
+==================================
+Run timestamp : 2026-09-21_11-26-31
+Struts version: 2.3.31
+CVE status    : VULNERABLE (2.3.31 — CVE-2017-5638 target)
+Maven result  : BUILD SUCCESS (from last mvn test run)
+Test summary  : Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
+
+CVEs in scope:
+  CVE-2017-5638    Apache Struts2 OGNL injection via Content-Type   CVSS 10.0
+  CVE-2016-1000031 commons-fileupload deserialization                CVSS 9.8
+
+Remediation reference: pom-reset.xml (struts2 7.1.1, commons-collections removed)
+
+commons-fileupload version    : transitive
+commons-collections version   : 3.2.1
+Surefire XML reports copied   : 5

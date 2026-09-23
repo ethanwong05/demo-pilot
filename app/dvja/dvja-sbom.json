@@ -1,170 +1,593 @@
 {
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
-  "serialNumber": "urn:uuid:53c63c48-88a9-4ff2-8394-7dcedcb6146e",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:c3f1977e-771c-4bac-94f4-1ea515b40986",
   "version": 1,
   "metadata": {
     "timestamp": "2026-09-22T19:15:04Z",
-    "tools": [
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "10.11.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@10.11.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@10.11.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
       {
-        "vendor": "cyclonedx-bom",
-        "name": "cyclonedx-py",
-        "version": "7.4.0"
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
       }
     ],
     "component": {
-      "type": "application",
-      "bom-ref": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT",
       "group": "com.appsecco",
       "name": "dvja",
       "version": "1.0-SNAPSHOT",
+      "type": "application",
+      "bom-ref": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT",
       "purl": "pkg:maven/com.appsecco/dvja@1.0-SNAPSHOT"
-    }
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "maven"
+      }
+    ]
   },
   "components": [
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.struts/struts2-core@2.3.30",
       "group": "org.apache.struts",
       "name": "struts2-core",
       "version": "2.3.30",
-      "purl": "pkg:maven/org.apache.struts/struts2-core@2.3.30"
+      "purl": "pkg:maven/org.apache.struts/struts2-core@2.3.30",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.struts/struts2-core@2.3.30",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
       "group": "org.apache.struts",
       "name": "struts2-config-browser-plugin",
       "version": "2.3.30",
-      "purl": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30"
+      "purl": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.struts/struts2-config-browser-plugin@2.3.30",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
       "group": "org.apache.logging.log4j",
       "name": "log4j-api",
       "version": "2.3",
-      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3"
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.3",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
       "group": "org.apache.logging.log4j",
       "name": "log4j-core",
       "version": "2.3",
-      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3"
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.3",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
       "group": "org.slf4j",
       "name": "slf4j-log4j12",
       "version": "1.5.2",
-      "purl": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2"
+      "purl": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-log4j12@1.5.2",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/cglib/cglib@2.2",
       "group": "cglib",
       "name": "cglib",
       "version": "2.2",
-      "purl": "pkg:maven/cglib/cglib@2.2"
+      "purl": "pkg:maven/cglib/cglib@2.2",
+      "type": "library",
+      "bom-ref": "pkg:maven/cglib/cglib@2.2",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/javax.servlet/servlet-api@2.4",
       "group": "javax.servlet",
       "name": "servlet-api",
       "version": "2.4",
-      "purl": "pkg:maven/javax.servlet/servlet-api@2.4"
+      "purl": "pkg:maven/javax.servlet/servlet-api@2.4",
+      "type": "library",
+      "bom-ref": "pkg:maven/javax.servlet/servlet-api@2.4",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.8,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.8,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "optional"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/javax.servlet/jsp-api@2.0",
       "group": "javax.servlet",
       "name": "jsp-api",
       "version": "2.0",
-      "purl": "pkg:maven/javax.servlet/jsp-api@2.0"
+      "purl": "pkg:maven/javax.servlet/jsp-api@2.0",
+      "type": "library",
+      "bom-ref": "pkg:maven/javax.servlet/jsp-api@2.0",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 0.8,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 0.8,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "optional"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
       "group": "com.jgeppert.struts2.bootstrap",
       "name": "struts2-bootstrap-plugin",
       "version": "2.5.1",
-      "purl": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1"
+      "purl": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
+      "type": "library",
+      "bom-ref": "pkg:maven/com.jgeppert.struts2.bootstrap/struts2-bootstrap-plugin@2.5.1",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
       "group": "org.apache.struts",
       "name": "struts2-spring-plugin",
       "version": "2.3.30",
-      "purl": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30"
+      "purl": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.struts/struts2-spring-plugin@2.3.30",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
       "group": "org.hibernate",
       "name": "hibernate-core",
       "version": "3.3.1.GA",
-      "purl": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA"
+      "purl": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.hibernate/hibernate-core@3.3.1.GA",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
       "group": "org.hibernate",
       "name": "hibernate-entitymanager",
       "version": "3.4.0.GA",
-      "purl": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA"
+      "purl": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.hibernate/hibernate-entitymanager@3.4.0.GA",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
       "group": "org.hibernate",
       "name": "hibernate-annotations",
       "version": "3.4.0.GA",
-      "purl": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA"
+      "purl": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.hibernate/hibernate-annotations@3.4.0.GA",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.10",
       "group": "commons-codec",
       "name": "commons-codec",
       "version": "1.10",
-      "purl": "pkg:maven/commons-codec/commons-codec@1.10"
+      "purl": "pkg:maven/commons-codec/commons-codec@1.10",
+      "type": "library",
+      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.10",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
       "group": "org.springframework",
       "name": "spring-tx",
       "version": "3.0.5.RELEASE",
-      "purl": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE"
+      "purl": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-tx@3.0.5.RELEASE",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
       "group": "org.springframework",
       "name": "spring-orm",
       "version": "3.0.5.RELEASE",
-      "purl": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE"
+      "purl": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-orm@3.0.5.RELEASE",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/mysql/mysql-connector-java@5.1.42",
       "group": "mysql",
       "name": "mysql-connector-java",
       "version": "5.1.42",
-      "purl": "pkg:maven/mysql/mysql-connector-java@5.1.42"
+      "purl": "pkg:maven/mysql/mysql-connector-java@5.1.42",
+      "type": "library",
+      "bom-ref": "pkg:maven/mysql/mysql-connector-java@5.1.42",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/com.google.code.gson/gson@2.8.1",
       "group": "com.google.code.gson",
       "name": "gson",
       "version": "2.8.1",
-      "purl": "pkg:maven/com.google.code.gson/gson@2.8.1"
+      "purl": "pkg:maven/com.google.code.gson/gson@2.8.1",
+      "type": "library",
+      "bom-ref": "pkg:maven/com.google.code.gson/gson@2.8.1",
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "/app/dvja/pom.xml"
+              }
+            ]
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/app/dvja/pom.xml"
+        }
+      ],
+      "scope": "required"
     }
   ],
   "dependencies": [
