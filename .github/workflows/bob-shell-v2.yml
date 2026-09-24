@@ -353,8 +353,7 @@ jobs:
     if: |
       needs.devops-cve-research.result == 'success' &&
       needs.devops-cve-research.outputs.false_positive_detected == 'true'
-    environment:
-      name: apikey-env
+    environment: apikey-env
     
     steps:
       - name: Checkout repository
@@ -534,8 +533,6 @@ jobs:
       (needs.devops-cve-research.result == 'success' &&
        needs.devops-cve-research.outputs.false_positive_detected != 'true') ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_to_step == '2')
-    environment:
-      name: apikey-env
     outputs:
       pr_number: ${{ needs.devops-cve-research.outputs.pr_number }}
       pr_branch: ${{ needs.devops-cve-research.outputs.pr_branch }}
